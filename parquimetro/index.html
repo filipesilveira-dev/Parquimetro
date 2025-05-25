@@ -7,12 +7,22 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>  <!--tag de marcação onde serão mostradas todas as informações visíveis na página-->
-    <h1>Parquímetro</h1>
-    <input type="number" name="valor" id="Credito">
-    <input type="button" value="Creditar" onclick="parquimetro1.creditar()">
-    <p id="credito">Crédito total</p>
-    <p id="tempo">Tempo</p>
-    <p id="troco">Troco</p>
+
+    <section>
+        <div id="estilo">
+            <div id="estilo2">
+                <h1>PARQUÍMETRO</h1>
+                <input type="number" name="valor" id="Credito" placeholder="Insira um valor">
+                <input type="button" value="Creditar" onclick="parquimetro1.creditar()">
+                <div id="valores">
+                    <p id="credito">Crédito total</p>
+                    <p id="tempo">Tempo</p>
+                    <p id="troco">Troco</p>
+            </div>
+            </div>
+        </div>
+        
+    </section>
 
     <script src="script.js"></script>
 </body>

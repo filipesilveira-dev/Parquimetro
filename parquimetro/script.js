@@ -85,8 +85,14 @@ class parquimetro{  //responsável por capturar as informações e mostrar o res
     //ok
     mostrarSaldo(credito){
         const creditoReais = credito.toLocaleString('pt-br', {style: 'currency', currency: 'BRL'});
-        document.getElementById("credito").textContent = `Crédito: ${creditoReais}`;
-        document.getElementById("Credito").value = '';
+        if(credito < 1){            
+            document.getElementById("credito").textContent = `Crédito: ${creditoReais} - Saldo insuficiente`;
+            document.getElementById("Credito").value = '';
+        } else {            
+            document.getElementById("credito").textContent = `Crédito: ${creditoReais}`;
+            document.getElementById("Credito").value = '';
+        }
+        
     } 
 
     //ok
@@ -104,4 +110,4 @@ class parquimetro{  //responsável por capturar as informações e mostrar o res
 }
 
 const conta = new valorParquimetro();
-const parquimetro1 = new parquimetro(conta); //importante ressaltar nessa linha que a primeira maiúsculas faz total diferença, tratando-se de duas instâncias totalmente diferentes. A "CaixaEletronico" que está sendo referenciada no "onclick" do HTML
+const parquimetro1 = new parquimetro(conta); 
